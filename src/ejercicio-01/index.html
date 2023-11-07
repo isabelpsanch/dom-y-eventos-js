@@ -1,40 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 1: Selección de Elementos por ID</title>
-
-  </head>
-  <body>
-    <section>
-      <h2>Lista de la compra</h2>
-      <ul id="lista-compra"></ul>
-    </section>
-    <input type="text" id="input-lista"/>
-    <button id="boton-formulario">Añadir a la lista de compra</butto>
+</head>
+<body>
+    <div id="miElemento">Texto inicial</div>
 
     <script>
-      const botonFormulario =document.getElementById('boton-formulario')
-      botonFormulario.addEventListener('click', (event) => {
-        const ListaCompra = document.getElementById('lista-compra')
-        const inputLista = document.getElementById('input-lista')
-
-        const elementoLista = document.createElement ('li')
-        const botonElemento = document.createElement ('button')
-        botonElemento.textContent = 'Eliminar'
-        botonElemento.addEventListener('click', (event) => {
-          const elementoLista = event.target.parentElement
-          ListaCompra.removeChild(elementoLista)
-        })
-        elementoLista.textContent = inputLista.ariaValue
-        elementoLista.append(botonElemento)
-
-        ListaCompra.appendChild(elementoLista)
-        inputLista.value = ''
-
-      })
-    
+        const elemento = document.getElementById('miElemento')
+        elemento.textContent = 'Nuevo Texto'
     </script>
-  </body>
+</body>
 </html>
